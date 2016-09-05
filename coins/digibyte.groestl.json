@@ -1,0 +1,5 @@
+{
+    "name": "Digibyte-Groestl",
+    "symbol": "DGB",
+    "algorithm": "groestlmyriad"
+}

@@ -1,0 +1,485 @@
+Script started on Thu 13 Nov 2014 12:06:47 PM UTC
+digihash@localhost:~/nomp$ cat digibyte.conf ls[Kcd groestl/ls[Kcat digibyte.conf [Kpa[Ks aux | grep digi
+root      3021  0.0  0.0  64532  3604 pts/1    S    Oct31   0:00 su [01;31m[Kdigi[m[Khash
+[01;31m[Kdigi[m[Khash  3022  0.0  0.0  21176  3984 pts/1    S+   Oct31   0:00 bash
+[01;31m[Kdigi[m[Khash  3123  0.1  0.1  50312  7880 pts/1    Sl   Oct31  37:53 redis-server *:6379
+root     10209  0.0  0.0  64532  3640 pts/3    S    11:59   0:00 su [01;31m[Kdigi[m[Khash
+[01;31m[Kdigi[m[Khash 10210  0.0  0.0  21148  3820 pts/3    S    11:59   0:00 bash
+[01;31m[Kdigi[m[Khash 10318  0.0  0.0  17680  2280 pts/3    S+   12:06   0:00 script
+[01;31m[Kdigi[m[Khash 10319  0.0  0.0  17684  1128 pts/3    S+   12:06   0:00 script
+[01;31m[Kdigi[m[Khash 10320  0.0  0.0  21132  3780 pts/4    Ss   12:06   0:00 bash -i
+[01;31m[Kdigi[m[Khash 10328  0.0  0.0  18448  2452 pts/4    R+   12:07   0:00 ps aux
+[01;31m[Kdigi[m[Khash 10329  0.0  0.0  11744  2196 pts/4    S+   12:07   0:00 grep [01;31m[Kdigi[m[K
+root     24332  1.1  6.6 1364864 270800 ?      SLsl Nov09  67:51 /home/[01;31m[Kdigi[m[Khash/ebs/scrypt/[01;31m[Kdigi[m[Kbyted -deamon -conf=/home/[01;31m[Kdigi[m[Khash/ebs/scrypt/[01;31m[Kdigi[m[Kbyte.conf
+digihash@localhost:~/nomp$ scrypts
+No command 'scrypts' found, did you mean:
+ Command 'scrypt' from package 'scrypt' (universe)
+scrypts: command not found
+digihash@localhost:~/nomp$ cat ../.bash_profile 
+alias groestl='sudo /home/digihash/ebs/groestl/digibyted -deamon -conf=/home/digihash/ebs/groestl/digibyte.conf'
+alias groestls='sudo /home/digihash/ebs/groestl/digibyted -deamon -conf=/home/digihash/ebs/groestl/digibyte.conf stop'
+alias groestli='sudo /home/digihash/ebs/groestl/digibyted -deamon -conf=/home/digihash/ebs/groestl/digibyte.conf getinfo'
+alias groestlr='sudo /home/digihash/ebs/groestl/digibyted -deamon -conf=/home/digihash/ebs/groestl/digibyte.conf -reindex'
+alias groestlb='sudo /home/digihash/ebs/groestl/digibyted -deamon -conf=/home/digihash/ebs/groestl/digibyte.conf getbalance'
+
+alias skein='sudo /home/digihash/ebs/skein/digibyted -deamon -conf=/home/digihash/ebs/skein/digibyte.conf'
+alias skeins='sudo /home/digihash/ebs/skein/digibyted -deamon -conf=/home/digihash/ebs/skein/digibyte.conf stop'
+alias skeini='sudo /home/digihash/ebs/skein/digibyted -deamon -conf=/home/digihash/ebs/skein/digibyte.conf getinfo'
+alias skeinr='sudo /home/digihash/ebs/skein/digibyted -deamon -conf=/home/digihash/ebs/skein/digibyte.conf -reindex'
+alias skeinb='sudo /home/digihash/ebs/skein/digibyted -deamon -conf=/home/digihash/ebs/skein/digibyte.conf getbalance'
+
+alias sha256='sudo /home/digihash/ebs/sha256d/digibyted -deamon -conf=/home/digihash/ebs/sha256d/digibyte.conf'
+alias sha256s='sudo /home/digihash/ebs/sha256d/digibyted -deamon -conf=/home/digihash/ebs/sha256d/digibyte.conf stop'
+alias sha256i='sudo /home/digihash/ebs/sha256d/digibyted -deamon -conf=/home/digihash/ebs/sha256d/digibyte.conf getinfo'
+alias sha256r='sudo /home/digihash/ebs/sha256d/digibyted -deamon -conf=/home/digihash/ebs/sha256d/digibyte.conf -reindex'
+alias sha256b='sudo /home/digihash/ebs/sha256d/digibyted -deamon -conf=/home/digihash/ebs/sha256d/digibyte.conf getbalance'
+
+alias qubit='sudo /home/digihash/ebs/qubit/digibyted -deamon -conf=/home/digihash/ebs/qubit/digibyte.conf'
+alias qubits='sudo /home/digihash/ebs/qubit/digibyted -deamon -conf=/home/digihash/ebs/qubit/digibyte.conf stop'
+alias qubiti='sudo /home/digihash/ebs/qubit/digibyted -deamon -conf=/home/digihash/ebs/qubit/digibyte.conf getinfo'
+alias qubitr='sudo /home/digihash/ebs/qubit/digibyted -deamon -conf=/home/digihash/ebs/qubit/digibyte.conf -reindex'
+alias qubitb='sudo /home/digihash/ebs/qubit/digibyted -deamon -conf=/home/digihash/ebs/qubit/digibyte.conf getbalance'
+
+alias scrypt='sudo /home/digihash/ebs/scrypt/digibyted -deamon -conf=/home/digihash/ebs/scrypt/digibyte.conf'
+alias scrypts='sudo /home/digihash/ebs/scrypt/digibyted -deamon -conf=/home/digihash/ebs/scrypt/digibyte.conf stop'
+alias scrypti='sudo /home/digihash/ebs/scrypt/digibyted -deamon -conf=/home/digihash/ebs/scrypt/digibyte.conf getinfo'
+alias scryptr='sudo /home/digihash/ebs/scrypt/digibyted -deamon -conf=/home/digihash/ebs/scrypt/digibyte.conf -reindex'
+alias scryptb='sudo /home/digihash/ebs/scrypt/digibyted -deamon -conf=/home/digihash/ebs/scrypt/digibyte.conf getbalance'
+
+alias digihash='cd ;screen -S pool;node init.js'
+digihash@localhost:~/nomp$ cat ../.bash_profile [C[C[C[1P[1P[1P[1@s[1@o[1@u[1@r[1@c[1@e
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ scrypts
+[sudo] password for digihash: 
+Sorry, try again.
+[sudo] password for digihash: 
+Sorry, try again.
+[sudo] password for digihash: 
+DigiByte server stopping
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ scrypts[K[K[K[K[K[K[Ksource ../.bash_profile [3Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pscryptsps aux | grep digicat digibyte.conf ps aux | grep digi
+root      3021  0.0  0.0  64532  3604 pts/1    S    Oct31   0:00 su [01;31m[Kdigi[m[Khash
+[01;31m[Kdigi[m[Khash  3022  0.0  0.0  21176  3984 pts/1    S+   Oct31   0:00 bash
+[01;31m[Kdigi[m[Khash  3123  0.1  0.1  50312  7880 pts/1    Sl   Oct31  37:53 redis-server *:6379
+root     10209  0.0  0.0  64532  3640 pts/3    S    11:59   0:00 su [01;31m[Kdigi[m[Khash
+[01;31m[Kdigi[m[Khash 10210  0.0  0.0  21148  3820 pts/3    S    11:59   0:00 bash
+[01;31m[Kdigi[m[Khash 10318  0.0  0.0  17680  2280 pts/3    S+   12:06   0:00 script
+[01;31m[Kdigi[m[Khash 10319  0.0  0.0  17684  1128 pts/3    S+   12:06   0:00 script
+[01;31m[Kdigi[m[Khash 10320  0.0  0.0  21148  3800 pts/4    Ss   12:06   0:00 bash -i
+[01;31m[Kdigi[m[Khash 10345  0.0  0.0  18448  2536 pts/4    R+   12:08   0:00 ps aux
+[01;31m[Kdigi[m[Khash 10346  0.0  0.0  11744  2232 pts/4    S+   12:08   0:00 grep [01;31m[Kdigi[m[K
+digihash@localhost:~/nomp$ ps aux | grep digi[Ksource ../.bash_profile [3Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pscrypts[K
+DigiByte server starting
+digihash@localhost:~/nomp$ qui[Kbit
+DigiByte server starting
+digihash@localhost:~/nomp$ sha256
+DigiByte server starting
+digihash@localhost:~/nomp$ skein
+DigiByte server starting
+digihash@localhost:~/nomp$ groestl
+DigiByte server starting
+digihash@localhost:~/nomp$ node init.js
+[32m2014-11-13 12:09:40 [POSIX]	[39m[3m[Connection Limit] [23m[90m(Safe to ignore) POSIX module not installed and resource (connection) limit was not raised[39m
+[32m2014-11-13 12:09:40 [Master]	[39m[3m[CLI] [23m[90mCLI listening on port 17117[39m
+[32m2014-11-13 12:09:41 [Payments]	[39m[3m[digibyte-groestl] [23m[90mPayment processing setup to run every 20 second(s) with daemon (digitrade_user@127.0.0.1:10002) and redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Payments]	[39m[3m[digibyte-qubit] [23m[90mPayment processing setup to run every 20 second(s) with daemon (digitrade_user@127.0.0.1:10004) and redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Payments]	[39m[3m[digibyte-scrypt] [23m[90mPayment processing setup to run every 20 second(s) with daemon (digitrade_user@127.0.0.1:10001) and redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Payments]	[39m[3m[digibyte-sha256] [23m[90mPayment processing setup to run every 20 second(s) with daemon (digitrade_user@127.0.0.1:10000) and redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Payments]	[39m[3m[digibyte-skein] [23m[90mPayment processing setup to run every 20 second(s) with daemon (digitrade_user@127.0.0.1:10003) and redis (127.0.0.1:6379)[39m
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EACCES
+    at errnoException (net.js:904:11)
+    at net.js:1072:30
+    at Object.2:1 (cluster.js:594:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.emit (events.js:117:20)
+    at handleMessage (child_process.js:322:10)
+    at Pipe.channel.onread (child_process.js:349:11)
+[31m2014-11-13 12:09:41 [Master]	[39m[3m[Website] [23m[90mWebsite process died, spawning replacement...[39m
+[32m2014-11-13 12:09:41 [Payments]	[39m[3m[digibyte-groestl] [23m[90mFinished interval - time spent: 14ms total, 3ms redis, 5ms daemon RPC[39m
+[32m2014-11-13 12:09:41 [Payments]	[39m[3m[digibyte-qubit] [23m[90mFinished interval - time spent: 12ms total, 1ms redis, 4ms daemon RPC[39m
+[32m2014-11-13 12:09:41 [Payments]	[39m[3m[digibyte-skein] [23m[90mFinished interval - time spent: 12ms total, 2ms redis, 6ms daemon RPC[39m
+[32m2014-11-13 12:09:41 [Payments]	[39m[3m[digibyte-scrypt] [23m[90mFinished interval - time spent: 12ms total, 2ms redis, 6ms daemon RPC[39m
+[32m2014-11-13 12:09:41 [Payments]	[39m[3m[digibyte-sha256] [23m[90mFinished interval - time spent: 11ms total, 2ms redis, 6ms daemon RPC[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(Thread 1) [22m[39m[90mLoading last proxy state from redis[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 1) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 1) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 1) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 1) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 1) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[31m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 1) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 1) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 1) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 1) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 1) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[4m[36m2014-11-13 12:09:41 [Pool]	[39m[24m[3m[digibyte-groestl] [23m[90m[1m(Thread 1) [22m[39m[90mStratum Pool Server Started for digibyte-groestl [DGB] {groestlmyriad}
+						Network Connected:	Mainnet
+						Detected Reward Type:	POW
+						Current Block Height:	329917
+						Current Connect Peers:	4
+						Current Block Diff:	3314421504341.2495
+						Network Difficulty:	4640189939328.221
+						Network Hash Rate:	NaN KH
+						Stratum Port(s):	3010, 3034, 3258
+						Pool Fee Percent:	2%
+						Block polling every:	1000 ms[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(groestlmyriad) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[4m[36m2014-11-13 12:09:41 [Pool]	[39m[24m[3m[digibyte-skein] [23m[90m[1m(Thread 1) [22m[39m[90mStratum Pool Server Started for digibyte-skein [DGB] {skein}
+						Network Connected:	Mainnet
+						Detected Reward Type:	POW
+						Current Block Height:	329917
+						Current Connect Peers:	3
+						Current Block Diff:	11611.765488341
+						Network Difficulty:	16256.43652275
+						Network Hash Rate:	NaN KH
+						Stratum Port(s):	3011, 3035, 3259
+						Pool Fee Percent:	2%
+						Block polling every:	1000 ms[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(skein) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[4m[36m2014-11-13 12:09:41 [Pool]	[39m[24m[3m[digibyte-sha256] [23m[90m[1m(Thread 1) [22m[39m[90mStratum Pool Server Started for digibyte-sha256 [DGB] {sha256}
+						Network Connected:	Mainnet
+						Detected Reward Type:	POW
+						Current Block Height:	329917
+						Current Connect Peers:	3
+						Current Block Diff:	938400.564118364
+						Network Difficulty:	750720.06685844
+						Network Hash Rate:	NaN KH
+						Stratum Port(s):	3008, 3032, 3256
+						Pool Fee Percent:	2%
+						Block polling every:	1000 ms[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(sha256) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[4m[36m2014-11-13 12:09:41 [Pool]	[39m[24m[3m[digibyte-qubit] [23m[90m[1m(Thread 1) [22m[39m[90mStratum Pool Server Started for digibyte-qubit [DGB] {qubit}
+						Network Connected:	Mainnet
+						Detected Reward Type:	POW
+						Current Block Height:	329917
+						Current Connect Peers:	3
+						Current Block Diff:	351.828877005
+						Network Difficulty:	419.14107977
+						Network Hash Rate:	NaN KH
+						Stratum Port(s):	3012, 3036, 3260
+						Pool Fee Percent:	2%
+						Block polling every:	1000 ms[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(qubit) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[4m[36m2014-11-13 12:09:41 [Pool]	[39m[24m[3m[digibyte-scrypt] [23m[90m[1m(Thread 1) [22m[39m[90mStratum Pool Server Started for digibyte-scrypt [DGB] {scrypt}
+						Network Connected:	Mainnet
+						Detected Reward Type:	POW
+						Current Block Height:	329917
+						Current Connect Peers:	1
+						Current Block Diff:	9355173.66550528
+						Network Difficulty:	7484087.9890432
+						Network Hash Rate:	NaN KH
+						Stratum Port(s):	3009, 3033, 3257
+						Pool Fee Percent:	2%
+						Block polling every:	1000 ms[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(scrypt) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(Thread 2) [22m[39m[90mLoading last proxy state from redis[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 2) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 2) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 2) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 2) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 2) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[31m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 2) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 2) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 2) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 2) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 2) [22m[39m[90mStratum Pool Server Started for digibyte-qubit [DGB] {qubit}[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(qubit) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[31m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 2) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 2) [22m[39m[90mStratum Pool Server Started for digibyte-sha256 [DGB] {sha256}[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(sha256) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 2) [22m[39m[90mStratum Pool Server Started for digibyte-groestl [DGB] {groestlmyriad}[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(groestlmyriad) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 2) [22m[39m[90mStratum Pool Server Started for digibyte-scrypt [DGB] {scrypt}[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(scrypt) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:41 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 2) [22m[39m[90mStratum Pool Server Started for digibyte-skein [DGB] {skein}[39m
+[32m2014-11-13 12:09:41 [Switching]	[39m[3m[Setup] [23m[90m[1m(skein) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:41 [Master]	[39m[3m[PoolSpawner] [23m[90mSpawned 5 pool(s) on 4 thread(s)[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(Thread 3) [22m[39m[90mLoading last proxy state from redis[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 3) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 3) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 3) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 3) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[31m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 3) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 3) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 3) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 3) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 3) [22m[39m[90mStratum Pool Server Started for digibyte-groestl [DGB] {groestlmyriad}[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(groestlmyriad) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mStratum Pool Server Started for digibyte-sha256 [DGB] {sha256}[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(sha256) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 3) [22m[39m[90mStratum Pool Server Started for digibyte-skein [DGB] {skein}[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(skein) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 3) [22m[39m[90mStratum Pool Server Started for digibyte-scrypt [DGB] {scrypt}[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(scrypt) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 3) [22m[39m[90mStratum Pool Server Started for digibyte-qubit [DGB] {qubit}[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(qubit) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(Thread 4) [22m[39m[90mLoading last proxy state from redis[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 4) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 4) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 4) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 4) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 4) [22m[39m[90mShare processing setup with redis (127.0.0.1:6379)[39m
+[31m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 4) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 4) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 4) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 4) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[31m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 4) [22m[39m[90mp2p cannot be enabled without peerMagic set in coin configuration[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 4) [22m[39m[90mStratum Pool Server Started for digibyte-groestl [DGB] {groestlmyriad}[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(groestlmyriad) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 4) [22m[39m[90mStratum Pool Server Started for digibyte-scrypt [DGB] {scrypt}[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(scrypt) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 4) [22m[39m[90mStratum Pool Server Started for digibyte-skein [DGB] {skein}[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(skein) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 4) [22m[39m[90mStratum Pool Server Started for digibyte-qubit [DGB] {qubit}[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(qubit) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:42 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 4) [22m[39m[90mStratum Pool Server Started for digibyte-sha256 [DGB] {sha256}[39m
+[32m2014-11-13 12:09:42 [Switching]	[39m[3m[Setup] [23m[90m[1m(sha256) [22m[39m[90mSetting proxy difficulties after pool start[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 3) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 3) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 3) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 4) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 4) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 4) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 4) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 1) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 1) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 1) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 1) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 1) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-qubit] [23m[90m[1m(Thread 2) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 2) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-groestl] [23m[90m[1m(Thread 2) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 2) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:43 [Pool]	[39m[3m[digibyte-skein] [23m[90m[1m(Thread 2) [22m[39m[90mBlock notification via RPC polling[39m
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EACCES
+    at errnoException (net.js:904:11)
+    at net.js:1072:30
+    at Object.7:1 (cluster.js:594:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.emit (events.js:117:20)
+    at handleMessage (child_process.js:322:10)
+    at Pipe.channel.onread (child_process.js:349:11)
+[31m2014-11-13 12:09:43 [Master]	[39m[3m[Website] [23m[90mWebsite process died, spawning replacement...[39m
+[32m2014-11-13 12:09:44 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 3) [22m[39m[90mBlock notification via RPC polling[39m
+[32m2014-11-13 12:09:44 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 4) [22m[39m[90mAuthorized DRWTNobVmVnebWDX6LXRwyY8auTaeeNdUE:Anything [196.38.193.198][39m
+[32m2014-11-13 12:09:44 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 4) [22m[39m[90mBlock notification via RPC polling[39m
+[33m2014-11-13 12:09:45 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mMalformed message from (unauthorized) [77.13.146.169]:   b�	���`�Jk�=��5�w��p�2%��{?p�  v�0�,�(�$��[39m
+[33m2014-11-13 12:09:45 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mMalformed message from (unauthorized) [77.13.146.169]:  � � k j 9 8 � ��2�.�*�&�� � = 5 ���  �� [39m
+[33m2014-11-13 12:09:45 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mMalformed message from (unauthorized) [77.13.146.169]: �/�+�'�#��	 � � g @ 3 2 � � E D�1�-�)�%�� � < / � A �  }      digihash.co    [39m
+[33m2014-11-13 12:09:45 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mMalformed message from (unauthorized) [77.13.146.169]:  4 2       	 [39m
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EACCES
+    at errnoException (net.js:904:11)
+    at net.js:1072:30
+    at Object.8:1 (cluster.js:594:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.emit (events.js:117:20)
+    at handleMessage (child_process.js:322:10)
+    at Pipe.channel.onread (child_process.js:349:11)
+[31m2014-11-13 12:09:46 [Master]	[39m[3m[Website] [23m[90mWebsite process died, spawning replacement...[39m
+[33m2014-11-13 12:09:46 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mMalformed message from (unauthorized) [77.13.146.169]:   ����c���=8{|~�FD���$��a��"�  v�0�,�(�$��[39m
+[33m2014-11-13 12:09:46 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mMalformed message from (unauthorized) [77.13.146.169]:  � � k j 9 8 � ��2�.�*�&�� � = 5 ���  �� [39m
+[33m2014-11-13 12:09:46 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mMalformed message from (unauthorized) [77.13.146.169]: �/�+�'�#��	 � � g @ 3 2 � � E D�1�-�)�%�� � < / � A �  }      digihash.co    [39m
+[33m2014-11-13 12:09:46 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mMalformed message from (unauthorized) [77.13.146.169]:  4 2       	 [39m
+[32m2014-11-13 12:09:46 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mAuthorized DT15YNbCfZZRpZbGr8tHKLBg4GPC7Eg9Dv:x [77.13.146.169][39m
+[32m2014-11-13 12:09:47 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mAuthorized DDYRwjX3JPv5nUB7WDm1vQkZe3G72K2443:x [188.129.119.86][39m
+[32m2014-11-13 12:09:47 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 3) [22m[39m[90mAuthorized D5SHAUDiL2JEs7LxD5VTLekgvy52Nw238C:vale46 [94.214.227.134][39m
+[32m2014-11-13 12:09:47 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 3) [22m[39m[90mAuthorized D5SHAUDiL2JEs7LxD5VTLekgvy52Nw238C:vale46 [94.214.227.134][39m
+[32m2014-11-13 12:09:47 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 2) [22m[39m[90mAuthorized D5SHAUDiL2JEs7LxD5VTLekgvy52Nw238C:vale46 [94.214.227.134][39m
+[32m2014-11-13 12:09:47 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 3) [22m[39m[90mAuthorized DDYRwjX3JPv5nUB7WDm1vQkZe3G72K2443:x [188.129.119.86][39m
+[32m2014-11-13 12:09:47 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 2) [22m[39m[90mAuthorized DDYRwjX3JPv5nUB7WDm1vQkZe3G72K2443:x [188.129.119.86][39m
+[32m2014-11-13 12:09:47 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 1) [22m[39m[90mAuthorized DDYRwjX3JPv5nUB7WDm1vQkZe3G72K2443:x [188.129.119.86][39m
+[32m2014-11-13 12:09:47 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 4) [22m[39m[90mAuthorized DDYRwjX3JPv5nUB7WDm1vQkZe3G72K2443:x [188.129.119.86][39m
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EACCES
+    at errnoException (net.js:904:11)
+    at net.js:1072:30
+    at Object.9:1 (cluster.js:594:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.emit (events.js:117:20)
+    at handleMessage (child_process.js:322:10)
+    at Pipe.channel.onread (child_process.js:349:11)
+[31m2014-11-13 12:09:48 [Master]	[39m[3m[Website] [23m[90mWebsite process died, spawning replacement...[39m
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: bind EACCES
+    at errnoException (net.js:904:11)
+    at net.js:1072:30
+    at Object.10:1 (cluster.js:594:5)
+    at handleResponse (cluster.js:171:41)
+    at respond (cluster.js:192:5)
+    at handleMessage (cluster.js:202:5)
+    at process.emit (events.js:117:20)
+    at handleMessage (child_process.js:322:10)
+    at Pipe.channel.onread (child_process.js:349:11)
+[31m2014-11-13 12:09:51 [Master]	[39m[3m[Website] [23m[90mWebsite process died, spawning replacement...[39m
+[32m2014-11-13 12:09:51 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 3) [22m[39m[90mShare accepted at diff 32/51.73630735 by D5SHAUDiL2JEs7LxD5VTLekgvy52Nw238C [94.214.227.134][39m
+[32m2014-11-13 12:09:51 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 3) [22m[39m[90mShare accepted at diff 32/40.47172162 by D5SHAUDiL2JEs7LxD5VTLekgvy52Nw238C [94.214.227.134][39m
+[32m2014-11-13 12:09:51 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 2) [22m[39m[90mShare accepted at diff 32/101.95900133 by D5SHAUDiL2JEs7LxD5VTLekgvy52Nw238C [94.214.227.134][39m
+[32m2014-11-13 12:09:51 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 3) [22m[39m[90mShare accepted at diff 32/86.69831291 by D5SHAUDiL2JEs7LxD5VTLekgvy52Nw238C [94.214.227.134][39m
+[32m2014-11-13 12:09:51 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 3) [22m[39m[90mShare accepted at diff 32/52.07106323 by D5SHAUDiL2JEs7LxD5VTLekgvy52Nw238C [94.214.227.134][39m
+[32m2014-11-13 12:09:51 [Pool]	[39m[3m[digibyte-sha256] [23m[90m[1m(Thread 2) [22m[39m[90mAuthorized DGU4nA36cfDoSFU7bZ1Zvi4J1HmaUt5zMs:x [50.71.72.192][39m
+[32m2014-11-13 12:09:52 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 2) [22m[39m[90mShare accepted at diff 32/95.90883607 by D5SHAUDiL2JEs7LxD5VTLekgvy52Nw238C [94.214.227.134][39m
+[32m2014-11-13 12:09:53 [Pool]	[39m[3m[digibyte-scrypt] [23m[90m[1m(Thread 2) [22m[39m[90mShare accepted at diff 32/40.01499569 by D5SHAUDiL2JEs7LxD5VTLekgvy52Nw238C [94.214.227.134][39m
+^Cdigihash@localhost:~/nomp$ ^C
+digihash@localhost:~/nomp$ ^C
+digihash@localhost:~/nomp$ ^C
+digihash@localhost:~/nomp$ ^C
+digihash@localhost:~/nomp$ ^C
+digihash@localhost:~/nomp$ ^C
+digihash@localhost:~/nomp$ ^C
+digihash@localhost:~/nomp$ ^C
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ 
+digihash@localhost:~/nomp$ ls
+coins		     config_example.json.old  dump.rdb	libs	 node_modules  pool_configs  scripts	 website
+config_example.json  config.json	      init.js	LICENSE  package.json  README.md     typescript
+digihash@localhost:~/nomp$ [5P(reverse-i-search)`':[Cn': node init.js[1@o[C[C[C[C[8@failed reverse-i-search)`noh[C[C[C[1@u[C[C[C[1@p[C[C[C[7Pdigihash@localhost:~/nomp$[C[C[C[C[C[C[C[C[C[C[C[C[C^C
+digihash@localhost:~/nomp$ s[Kscreen -ls
+No Sockets found in /var/run/screen/S-digihash.
+
+digihash@localhost:~/nomp$ nohup 2>&1 node init.js &
+[1] 10506
+digihash@localhost:~/nomp$ nohup: ignoring input and appending output to ‘nohup.out’
+
+digihash@localhost:~/nomp$ ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.1  33900  4360 ?        Ss   Oct31   0:06 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    Oct31   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    Oct31   0:13 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   Oct31   0:00 [kworker/0:0H]
+root         7  0.0  0.0      0     0 ?        S    Oct31  11:50 [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    Oct31   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    Oct31   0:00 [migration/0]
+root        10  0.0  0.0      0     0 ?        S    Oct31   0:00 [migration/1]
+root        11  0.0  0.0      0     0 ?        S    Oct31   0:05 [ksoftirqd/1]
+root        13  0.0  0.0      0     0 ?        S<   Oct31   0:00 [kworker/1:0H]
+root        14  0.0  0.0      0     0 ?        S    Oct31   0:00 [migration/2]
+root        15  0.0  0.0      0     0 ?        S    Oct31   0:05 [ksoftirqd/2]
+root        16  0.0  0.0      0     0 ?        S    Oct31   0:00 [kworker/2:0]
+root        17  0.0  0.0      0     0 ?        S<   Oct31   0:00 [kworker/2:0H]
+root        18  0.0  0.0      0     0 ?        S    Oct31   0:00 [migration/3]
+root        19  0.0  0.0      0     0 ?        S    Oct31   0:05 [ksoftirqd/3]
+root        21  0.0  0.0      0     0 ?        S<   Oct31   0:00 [kworker/3:0H]
+root        22  0.0  0.0      0     0 ?        S<   Oct31   0:00 [khelper]
+root        23  0.0  0.0      0     0 ?        S    Oct31   0:00 [kdevtmpfs]
+root        24  0.0  0.0      0     0 ?        S<   Oct31   0:00 [netns]
+root        28  0.0  0.0      0     0 ?        S    Oct31   0:00 [xenwatch]
+root        29  0.0  0.0      0     0 ?        S    Oct31   0:00 [xenbus]
+root        84  0.0  0.0      0     0 ?        S<   Oct31   0:00 [writeback]
+root        88  0.0  0.0      0     0 ?        S<   Oct31   0:00 [bioset]
+root        91  0.0  0.0      0     0 ?        S<   Oct31   0:00 [crypto]
+root        94  0.0  0.0      0     0 ?        S<   Oct31   0:00 [kblockd]
+root       234  0.0  0.0      0     0 ?        S<   Oct31   0:00 [md]
+root       324  0.0  0.0      0     0 ?        S<   Oct31   0:00 [rpciod]
+root       338  0.0  0.0      0     0 ?        S    Oct31   0:57 [kworker/2:1]
+root       447  0.0  0.0      0     0 ?        S    Oct31   0:00 [kswapd0]
+root       503  0.0  0.0      0     0 ?        S    Oct31   0:00 [fsnotify_mark]
+root       536  0.0  0.0      0     0 ?        S    Oct31   0:00 [ecryptfs-kthrea]
+root       540  0.0  0.0      0     0 ?        S<   Oct31   0:00 [nfsiod]
+root       550  0.0  0.0      0     0 ?        S<   Oct31   0:00 [cifsiod]
+root       572  0.0  0.0      0     0 ?        S    Oct31   0:00 [jfsIO]
+root       573  0.0  0.0      0     0 ?        S    Oct31   0:00 [jfsCommit]
+root       574  0.0  0.0      0     0 ?        S    Oct31   0:00 [jfsCommit]
+root       575  0.0  0.0      0     0 ?        S    Oct31   0:00 [jfsCommit]
+root       576  0.0  0.0      0     0 ?        S    Oct31   0:00 [jfsCommit]
+root       577  0.0  0.0      0     0 ?        S    Oct31   0:00 [jfsSync]
+root       583  0.0  0.0      0     0 ?        S<   Oct31   0:00 [xfsalloc]
+root       585  0.0  0.0      0     0 ?        S<   Oct31   0:00 [xfs_mru_cache]
+root       587  0.0  0.0      0     0 ?        S<   Oct31   0:00 [xfslogd]
+root       588  0.0  0.0      0     0 ?        S<   Oct31   0:00 [glock_workqueue]
+root       589  0.0  0.0      0     0 ?        S<   Oct31   0:00 [delete_workqueu]
+root       594  0.0  0.0      0     0 ?        S<   Oct31   0:00 [gfs_recovery]
+root      1170  0.0  0.0      0     0 ?        S    Oct31   0:00 [khvcd]
+root      1262  0.0  0.0      0     0 ?        S<   Oct31   0:00 [bioset]
+root      1263  0.0  0.0      0     0 ?        S<   Oct31   0:00 [drbd-reissue]
+root      1283  0.0  0.0      0     0 ?        S<   Oct31   0:00 [kpsmoused]
+root      1286  0.0  0.0      0     0 ?        S<   Oct31   0:00 [raid5wq]
+root      1289  0.0  0.0      0     0 ?        S<   Oct31   0:00 [dm_bufio_cache]
+root      1313  0.0  0.0      0     0 ?        S<   Oct31   0:00 [ipv6_addrconf]
+root      1338  0.0  0.0      0     0 ?        S<   Oct31   0:00 [bioset]
+root      1356  0.0  0.0      0     0 ?        S<   Oct31   0:00 [deferwq]
+root      1359  0.0  0.0      0     0 ?        S<   Oct31   0:13 [kworker/0:1H]
+root      1361  0.0  0.0      0     0 ?        S    Oct31   0:36 [jbd2/xvda-8]
+root      1362  0.0  0.0      0     0 ?        S<   Oct31   0:00 [ext4-rsv-conver]
+root      1483  0.0  0.0  20404  2928 ?        S    Oct31   0:00 upstart-udev-bridge --daemon
+root      1488  0.0  0.0  49268  3172 ?        Ss   Oct31   0:00 /lib/systemd/systemd-udevd --daemon
+root      2418  0.0  0.1  10224  4380 ?        Ss   Oct31   0:00 dhclient -1 -v -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.
+message+  2657  0.0  0.0  39116  2320 ?        Ss   Oct31   0:00 dbus-daemon --system --fork
+root      2712  0.0  0.0  43452  3220 ?        Ss   Oct31   0:00 /lib/systemd/systemd-logind
+syslog    2714  0.0  0.5 256232 23516 ?        Ssl  Oct31   0:27 rsyslogd
+root      2732  0.0  0.1  61364  5432 ?        Ss   Oct31   0:32 /usr/sbin/sshd -D
+root      2733  0.0  0.0  23656  2312 ?        Ss   Oct31   0:02 cron
+daemon    2734  0.0  0.0  19140   160 ?        Ss   Oct31   0:00 atd
+root      2798  0.0  0.0  15836  2544 ?        S    Oct31   0:00 upstart-socket-bridge --daemon
+root      2802  0.0  0.0  15672  2208 ?        S    Oct31   0:00 upstart-file-bridge --daemon
+root      2874  0.0  0.0  12788  1884 hvc0     Ss+  Oct31   0:00 /sbin/getty -8 38400 hvc0
+ntp       2948  0.0  0.1  31444  4400 ?        Ss   Oct31   1:17 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 103:109
+root      2951  0.0  0.0      0     0 ?        S    Oct31   0:00 [kauditd]
+root      3010  0.0  0.0  27720  3288 ?        Ss   Oct31   4:17 SCREEN -S pool
+root      3011  0.0  0.0  21112  3916 pts/1    Ss   Oct31   0:00 /bin/bash
+root      3021  0.0  0.0  64532  3604 pts/1    S    Oct31   0:00 su digihash
+digihash  3022  0.0  0.0  21176  3984 pts/1    S+   Oct31   0:00 bash
+digihash  3123  0.1  0.2  50312  8580 pts/1    Sl   Oct31  37:54 redis-server *:6379
+root      3552  0.0  0.0      0     0 ?        S<   Oct31   0:00 [kworker/1:1H]
+root      3554  0.0  0.0      0     0 ?        S<   Oct31   0:00 [kworker/2:1H]
+root      3910  0.0  0.0      0     0 ?        S<   Oct31   0:00 [kworker/3:1H]
+root      5605  0.0  0.0      0     0 ?        S    02:42   0:00 [kworker/0:0]
+root      6328  0.0  0.0      0     0 ?        S    03:51   0:02 [kworker/0:2]
+root      8156  0.0  0.0      0     0 ?        S    07:27   0:00 [kworker/u8:2]
+root      9952  0.0  0.0      0     0 ?        S    11:33   0:00 [kworker/1:2]
+root     10131  0.0  0.1 105632  6668 ?        Rs   11:59   0:00 sshd: root@pts/3    
+root     10140  0.0  0.0      0     0 ?        S    11:59   0:00 [kworker/1:0]
+root     10192  0.0  0.1  22308  5220 pts/3    Ss   11:59   0:00 -bash
+root     10209  0.0  0.0  64532  3640 pts/3    S    11:59   0:00 su digihash
+digihash 10210  0.0  0.0  21148  3820 pts/3    S    11:59   0:00 bash
+digihash 10318  0.0  0.0  17680  2280 pts/3    S+   12:06   0:00 script
+digihash 10319  0.0  0.0  17684  1128 pts/3    S+   12:06   0:00 script
+digihash 10320  0.0  0.0  21148  3800 pts/4    Ss   12:06   0:00 bash -i
+root     10349  3.3  4.9 1330236 202100 ?      SLsl 12:09   0:04 /home/digihash/ebs/scrypt/digibyted -deamon -conf=/home/digihash/ebs/
+root     10373  2.6  4.4 1208892 182392 ?      SLsl 12:09   0:03 /home/digihash/ebs/qubit/digibyted -deamon -conf=/home/digihash/ebs/q
+root     10392  2.9  4.4 1209524 182676 ?      SLsl 12:09   0:03 /home/digihash/ebs/sha256d/digibyted -deamon -conf=/home/digihash/ebs
+root     10411  2.8  4.4 1212644 183000 ?      SLsl 12:09   0:03 /home/digihash/ebs/skein/digibyted -deamon -conf=/home/digihash/ebs/s
+root     10432  3.1  4.4 1214136 184136 ?      SLsl 12:09   0:03 /home/digihash/ebs/groestl/digibyted -deamon -conf=/home/digihash/ebs
+digihash 10506  2.8  1.0 678116 43108 pts/4    Sl   12:11   0:00 node init.js
+digihash 10508  2.1  1.0 678112 43736 pts/4    Sl   12:11   0:00 /usr/bin/nodejs /home/digihash/nomp/init.js
+digihash 10512  3.2  1.1 678716 45472 pts/4    Sl   12:11   0:00 /usr/bin/nodejs /home/digihash/nomp/init.js
+digihash 10518  3.3  1.1 679684 45464 pts/4    Sl   12:11   0:00 /usr/bin/nodejs /home/digihash/nomp/init.js
+digihash 10520  3.0  1.1 679692 45488 pts/4    Sl   12:11   0:00 /usr/bin/nodejs /home/digihash/nomp/init.js
+digihash 10522  3.4  1.1 678840 45660 

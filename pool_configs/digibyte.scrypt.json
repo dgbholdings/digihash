@@ -1,0 +1,69 @@
+{
+    "enabled": true,
+    "coin": "digibyte.scrypt.json",
+
+    "address": "YourDGBWALLET_PoolAddress",
+
+    "rewardRecipients": {
+        "YourDGB_PoolAdminPayoutAddressHere": 3.0
+    },
+
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 60,
+        "minimumPayment": 500,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 10001,
+            "user": "digitrade_user",
+            "password": "digitrade_password"
+        }
+    },
+
+    "ports": {
+        "3009": {
+            "diff": 8
+        },
+        "3033": {
+            "diff": 32,
+            "varDiff": {
+                "minDiff": 8,
+                "maxDiff": 512,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "3257": {
+            "diff": 256
+        }
+    },
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 10001,
+            "user": "digitrade_user",
+            "password": "digitrade_password"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 12024,
+        "disableTransactions": true
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "me",
+        "password": "mypass",
+        "database": "ltc",
+        "checkPassword": true,
+        "autoCreateWorker": false
+    }
+
+}
